@@ -9,5 +9,8 @@ alert('ghj');
 // gfhcfgh
 // ftcghcfgh
 console.log();
+console.log('fgvhgfh');
+console.log('ghnvcgbh');
+
 
 alert(6);
