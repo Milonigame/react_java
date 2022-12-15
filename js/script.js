@@ -8,5 +8,6 @@ alert(`hello,${user}`);
 alert('ghj');
 // gfhcfgh
 // ftcghcfgh
+console.log();
 
 alert(6);
