@@ -34,3 +34,4 @@ const answer2= prompt('На сколько лцените его?','');
 
 personalMovieDB.movies[answer1]=answer2;
 console.log(personalMovieDB);
+console.log(personalMovieDB);
