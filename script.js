@@ -30,8 +30,25 @@ privat:false
 };
 
 const answer1= prompt('Один из последних просмотренных фильмов?','');
-const answer2= prompt('На сколько лцените его?','');
+const answer2= prompt('На сколько оцените его?','');
 
 personalMovieDB.movies[answer1]=answer2;
 console.log(personalMovieDB);
-console.log(personalMovieDB);
+
+
+ /////////////////////////////////////////////
+// вложенный цикл
+/////////////////////////////////////////////
+
+let result='';
+const length=7;
+
+for (let i =1; i<length; i++){
+for (let j=0; j<i; j++){
+    result+='*';
+}
+result+='\n';
+}
+
+console.log(result);
+
