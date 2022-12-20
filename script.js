@@ -1,40 +1,4 @@
 
-// урок №1 ответы от пользователя
-/* Задание на урок:
-1) Создать переменную numberOfFilms и в неё поместить ответ от пользователя на вопрос:
-'Сколько фильмов вы уже посмотрели?'
-2) Создать объект personalMovieDB и в него поместить такие свойства:
-    - count - сюда передается ответ на первый вопрос
-    - movies - в это свойство поместить пустой объект
-    - actors - тоже поместить пустой объект
-    - genres - сюда поместить пустой массив
-    - privat - в это свойство поместить boolean(логическое) значение false
-3) Задайте пользователю по два раза вопросы:
-    - 'Один из последних просмотренных фильмов?'
-    - 'На сколько оцените его?'
-Ответы стоит поместить в отдельные переменные
-Записать ответы в объект movies в формате: 
-    movies: {
-        'logan': '8.1'
-    }
-Проверить, чтобы все работало без ошибок в консоли */
-const numberOfFilms= prompt('Сколько фильмов вы уже посмотрели?','');
-
-
-const personalMovieDB={
-count:numberOfFilms,
-movies:{},
-actors:{},
-genres:[],
-privat:false
-};
-
-const answer1= prompt('Один из последних просмотренных фильмов?','');
-const answer2= prompt('На сколько оцените его?','');
-
-personalMovieDB.movies[answer1]=answer2;
-console.log(personalMovieDB);
-
 
  /////////////////////////////////////////////
 // вложенный цикл
@@ -150,3 +114,78 @@ console.log(arr);
 
 firstTask();
 
+/////////////////////////////////////////////
+// задача 9
+/////////////////////////////////////////////
+function secondTask(){
+    const data = [5, 10, 'Shopping', 20, 'Homework'];
+    for(i=0;i<data.length;i++)
+    typeof data[i] ==='number'?data[i]=data[i]*2:data[i]
+    
+    console.log(data);
+    return data;
+};
+
+secondTask();
+
+/////////////////////////////////////////////
+// задача 10
+/////////////////////////////////////////////
+function thirdTask() {
+    // Значения массива менять нельзя, тут он проверяется автоматически именно на эти значения
+    const data = [5, 10, 'Shopping', 20, 'Homework'];
+    const result = [];
+    console.log(data.length);
+    for(let i=0;i<data.length;i++){
+    result[i]=data[(data.length-1)-i]
+    
+}
+console.log(result);
+    // Не трогаем
+    return result;
+}
+thirdTask() 
+
+/////////////////////////////////////////////
+// задача 11
+/////////////////////////////////////////////
+const lines = 5;
+let result1 = '';
+
+for (let i = 0; i <= lines; i++) {
+    for (let j = 0; j <lines  - i; j++) {
+        result1 += " ";
+    }
+    for (let j = 0; j < 2 * i + 1; j++) {
+        result1 += "*";
+    }
+    result1 += "\n";
+}
+
+console.log(result1)
+
+
+
+
+
+
+let res='';
+let q=5;
+let q2=5;
+
+for (let i=0; i<=5;i++){
+    for (let k=0; k<12;k++){
+        if(k<q||k>q2){
+            res+=' ';
+        }
+        else{
+            res+='*';
+        }
+       
+    }
+    q--;
+    q2++;
+    res+='\n';
+
+}
+console.log(res)
