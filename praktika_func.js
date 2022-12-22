@@ -29,6 +29,7 @@ genres:[],
 privat:false
 };
 
+function rememberMyFilms(){
 for (let i=0; i<2; i++){
 const answer1= prompt('Один из последних просмотренных фильмов?','');
 const answer2= prompt('На сколько оцените его?','');
@@ -39,6 +40,10 @@ if (answer1 != null && answer2 != null && answer1!='' && answer2!=''&&answer1.le
     console.log('error');
     i--;
  }
+}
+}
+rememberMyFilms();
+function detectPersonalLevel(){
  if (personalMovieDB.count<10){
     console.log('Просмотрено довольно мало фильмов');
  }else if(personalMovieDB.count>=10 && personalMovieDB.count<30){
@@ -49,9 +54,24 @@ console.log('Вы классический зритель');
         console.log('Вы классический зритель');
 }
 else {
-    console.log('Произошла ошибка')
+    console.log('Произошла ошибка');
 }
 
 }
 
+detectPersonalLevel();
+
+function showMyDB (hidden){
+if(!hidden){
 console.log(personalMovieDB);
+}
+}
+
+showMyDB(personalMovieDB.privat);
+
+function writeYourGenres(){
+    for (let i=1;i<=3;i++){
+    personalMovieDB.genres[i-1]=prompt(`Ваш любимый жанр под номером ${i}`);
+    }
+}
+writeYourGenres();
