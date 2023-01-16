@@ -25,7 +25,7 @@ circles[0].style.backgroundColor='red';
 
 
 // for (let i=0;i<hearts.length;i++){
-//     hearts[i].style.backgroundColor='blue';
+//     hearts[i].style.backgroundColor='blue';-
 // }////поменять цвет для всех элементов сразу
 hearts.forEach(item=>{
     item.style.backgroundColor='green';
@@ -59,6 +59,8 @@ div.innerHTML="<h1>Hello World</h1>";
 // div.insertAdjacentHTML('afterbegin','<h2>Hello</h2>');
 // div.insertAdjacentHTML('beforeend','<h2>Hello</h2>');
 // div.insertAdjacentHTML('afterend','<h2>Hello</h2>');
+
+alert(1);
 
 
 
