@@ -42,7 +42,20 @@ let students ={
     pro:[{
         name:'Sam',
         progress:10
-    }]
+    }],
+    semi:{
+        students:[{
+            name:'Test',
+            progress:100
+        }],
+        re:{
+            hg:{
+                gh:[{
+            name:'ghh',
+            progress:200
+        }]}}
+    }
+
     }
 };
 
