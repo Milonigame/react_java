@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     const images=document.querySelectorAll('.promo__adv img'),
           poster=document.querySelector('.promo__bg'),
           genre=poster.querySelector('.promo__genre'),
-          promo=document.querySelector('.promo__interactive-list'),
-          add=document.add.key;
+          promo=document.querySelector('.promo__interactive-list');
+          
           /////(5)
     
     
@@ -51,44 +51,8 @@ document.addEventListener('DOMContentLoaded',()=>{
     genre.textContent='Драма';
     // (3)
     poster.style.backgroundImage='url("img/bg.jpg")';
+    
+    
+    
 });
-
-const movieDB = {
-    movies: [
-        "Логан",
-        "Лига справедливости",
-        "Ла-ла лэнд",
-        "Одержимость",
-        "Скотт Пилигрим против..."
-    ]
-};
-
-
-const images=document.querySelectorAll('.promo__adv img'),
-      poster=document.querySelector('.promo__bg'),
-      genre=poster.querySelector('.promo__genre'),
-      promo=document.querySelector('.promo__interactive-list'),
-      add=document.add.key;
-      /////(5)
-
-
-// (4)
-promo.innerHTML='';
-movieDB.movies.sort();
-movieDB.movies.forEach((film,i)=>{
-promo.innerHTML+=` <li class="promo__interactive-item">${i+1}. ${film}
-<div class="delete"></div>
-</li>`;
-});
-
-
-// (1) 
-images.forEach(item=>{
-    item.remove();
-});
-// (2)
-genre.textContent='Драма';
-// (3)
-poster.style.backgroundImage='url("img/bg.jpg")';
-
 
