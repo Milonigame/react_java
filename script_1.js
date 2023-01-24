@@ -188,4 +188,4 @@ for (let i=0; i<=5;i++){
     res+='\n';
 
 }
-console.log(res)
+console.log(res);
