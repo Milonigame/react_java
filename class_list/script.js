@@ -19,7 +19,18 @@ btns[0].addEventListener('click',()=>{
 }
 });//вот такая конструкция содержится в методе toggle,
 //но в сложных скриптах лучше проверять вот таком кодом
-console.log(btns[0].className);//такой метод лучше не использовать,он устарел и не удобен
-wrapper.addEventListener('click',()=>{
+// console.log(btns[0].className);//такой метод лучше не использовать,он устарел и не удобен
+// wrapper.addEventListener('click',(event)=>{
+// if (event.target&&event.target.tagName=="BUTTON"){
+//     console.log('Hello');
+// }
+// });
+btns.forEach(btn=>{
+    btn.addEventListener('click',()=>{
+        console.log('Hello');
+    });
+});
 
-})
+const btn = document.createElement('button');
+btn.classList.add('red');
+wrapper.append(btn);
