@@ -1,38 +1,23 @@
-const btns=document.querySelectorAll('button'),
-      overlay=document.querySelector('.overlay');
-// btn.onclick=function(){
-//     alert('Click');
-// };
-// btn.onclick=function(){
-//     alert('Second');
-// };
+'use strict';
+const box = document.querySelector('.box'),
+btn=document.querySelector('button');
+// const width=box.clientWidth;
+// const height = box.clientHeight;
+//const width=box.offsetWidth;
+//const height=box.offsetHeight;
+const width=box.scrollWidth;
+const height=box.scrollHeight;
 
-// btn.addEventListener('click', ()=>{
-//     alert('Click');
-// });
-// let i=0;
-const deleteElement = (e) =>{
-    console.log(e.currentTarget);
-    console.log(e.type);
- //    i++;
- //    if (i=1){
- //     btn.removeEventListener('click', deleteElement);
- //    }
- };
- 
-btns.forEach(btn=>{
-btn.addEventListener('click', deleteElement, {once:true});
+console.log(width.height);
+
+btn.addEventListener('click',()=>{
+   // box.style.height=box.scrollHeight+'px';//инлайн стиль,он перебивавет css стили
+   console.log(box.scrollTop);
 });
 
+console.log(box.getBoundingClientRect().top);//координаты
 
+const style=window.getComputedStyle(box);
 
-// btn.addEventListener('click', deleteElement);
-// overlay.addEventListener('click', deleteElement);
-
-// const link=document.querySelector('a');
-// link.addEventListener('click', function(event){
-//     event.preventDefault();
-//     console.log(event.target);
-// });
-
-  
+console.log(style.display);
+console.log(document.documentElement.scrollTop);
